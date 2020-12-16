@@ -1,0 +1,106 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province_id" data-rule="required" data-source="region/index" class="form-control selectpage" name="row[province_id]" type="text" value="" data-params='{"custom[level]":"1"}' onchange="set_next_input(this);">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-city_id" data-rule="required"  class="form-control selectpage" name="row[city_id]" type="text" value="" data-params='{"custom[level]":"2"}'>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Category_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-category_id" data-rule="required" data-source="category/selectpage" data-params='{"custom[type]":"information", "custom[pid]":"0"}' class="form-control selectpage" name="row[category_id]" type="text" value="" onchange="set_next_input_category(this);">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Subcategory_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-subcategory_id" data-rule="required"   class="form-control selectpage" name="row[subcategory_id]" type="text" value="" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Maincontent')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-maincontent" class="form-control editor" rows="5" name="row[maincontent]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Images')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-images" class="form-control" size="50" name="row[images]" type="text">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-images" class="btn btn-danger faupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-images"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-images"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prescription')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-prescription" class="form-control" name="row[prescription]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contacts_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contacts_name" data-rule="required" class="form-control" name="row[contacts_name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contacts_phone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contacts_phone" data-rule="required;mobile" class="form-control" name="row[contacts_phone]" type="text" value="" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contacts_qq')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contacts_qq" class="form-control" name="row[contacts_qq]" type="text" value="" data-rule="qq">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Detailed_address')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-detailed_address" data-rule="required" class="form-control" name="row[detailed_address]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Read_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-read_number" data-rule="required" class="form-control" name="row[read_number]" type="number" value="0">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Update_password')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-update_password" class="form-control" name="row[update_password]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+

@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'Province_id'      => '省',
+    'City_id'          => '市',
+    'City_name'        => '地区名称',
+    'Category_id'      => '主分类',
+    'Subcategory_id'      => '子分类',
+    'Title'            => '标题',
+    'Maincontent'      => '内容描述',
+    'Images'           => '图片地址,多图',
+    'Prescription'     => '有效期,0为永久,单位：天',
+    'Contacts_name'    => '联系人姓名',
+    'Contacts_phone'   => '联系人电话',
+    'Contacts_qq'      => '联系人QQ',
+    'Detailed_address' => '详细地址',
+    'Read_number'      => '阅读数',
+    'Createtime'       => '创建时间',
+    'Updatetime'       => '更新时间',
+    'Deletetime'       => '删除时间',
+    'Weigh'            => '权重',
+    'Update_password'  => '修改密码',
+    'Province_city'  => '省,市',
+    'Category'  => '分类',
+    'Subcategory'  => '二级分类',
+];

@@ -1,0 +1,2051 @@
+---------------------------------------------------------------
+[ 2020-12-08T16:58:41+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/information/add?dialog=1
+[运行时间：0.035104s] [吞吐率：28.49req/s] [内存消耗：5,070.39kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001011s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000216s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'information',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000853s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ RUN ] app\common\controller\Backend->add[ E:\waibao\xgrx\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] E:\waibao\xgrx\public/../application/admin\view\information\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000152s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000727s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000350s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:58:41+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/ajax/lang?callback=define&controllername=information&lang=zh-cn&v=1607417921&v=1607417921
+[运行时间：0.027835s] [吞吐率：35.93req/s] [内存消耗：4,051.99kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001043s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000240s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'information',
+  'lang' => 'zh-cn',
+  'v' => '1607417921',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001244s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\waibao\xgrx\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000162s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-08T16:58:43+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.049284s] [吞吐率：20.29req/s] [内存消耗：5,156.35kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001032s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000219s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '217',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000858s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000424s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010182s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) LIMIT 1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:41+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/information/edit/ids/2?dialog=1
+[运行时间：0.059311s] [吞吐率：16.86req/s] [内存消耗：5,264.51kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001023s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000228s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'information',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '2',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000881s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ E:\waibao\xgrx\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] E:\waibao\xgrx\public/../application/admin\view\information\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000158s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009942s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_information` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_information` WHERE (  `id` = 2 ) AND `fa_information`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.000394s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:42+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/ajax/lang?callback=define&controllername=information&lang=zh-cn&v=1607417981&v=1607417981
+[运行时间：0.027917s] [吞吐率：35.82req/s] [内存消耗：4,051.99kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001028s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000217s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'information',
+  'lang' => 'zh-cn',
+  'v' => '1607417981',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001188s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\waibao\xgrx\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-08T16:59:42+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.045230s] [吞吐率：22.11req/s] [内存消耗：5,144.25kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001207s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000286s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '203',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '16',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '16',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000971s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000461s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001088s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (16) LIMIT 1 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (16) ORDER BY FIELD(`id`, 16) LIMIT 0,999999 [ RunTime:0.000295s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:42+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.061278s] [吞吐率：16.32req/s] [内存消耗：5,144.26kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001048s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000347s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '208',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '18',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '18',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '110100',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001228s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000481s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (18) LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (18) ORDER BY FIELD(`id`, 18) LIMIT 0,999999 [ RunTime:0.000221s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:42+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.084722s] [吞吐率：11.80req/s] [内存消耗：5,098.63kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001286s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000335s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '184',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110000',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110000',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '1',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000935s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000459s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000762s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110000) LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110000) ORDER BY FIELD(`id`, 110000) LIMIT 0,999999 [ RunTime:0.000204s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:42+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.096653s] [吞吐率：10.35req/s] [内存消耗：5,098.64kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001077s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000276s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '207',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110100',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110100',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '2',
+    'pid' => '110000',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001078s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000420s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110100) LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110100) ORDER BY FIELD(`id`, 110100) LIMIT 0,999999 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:43+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.050858s] [吞吐率：19.66req/s] [内存消耗：5,156.35kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001084s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000246s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '217',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000932s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000511s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010534s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000399s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:44+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.039356s] [吞吐率：25.41req/s] [内存消耗：5,148.69kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001063s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000226s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '222',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '110100',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000857s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000412s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000941s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 110100 ) LIMIT 1 [ RunTime:0.000376s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:46+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.050495s] [吞吐率：19.80req/s] [内存消耗：5,156.35kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001066s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000226s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '217',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000863s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000420s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010611s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000376s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:47+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.058595s] [吞吐率：17.07req/s] [内存消耗：5,155.79kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000995s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000225s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '218',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '14',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000878s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000413s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010526s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 14 ) LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 14 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000392s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:49+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.048803s] [吞吐率：20.49req/s] [内存消耗：5,156.35kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001040s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000228s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '217',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000850s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000437s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009966s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 0 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/information/edit/ids/2?dialog=1
+[运行时间：0.077138s] [吞吐率：12.96req/s] [内存消耗：5,070.29kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001064s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000227s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'information',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '2',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000853s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ E:\waibao\xgrx\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] E:\waibao\xgrx\public/../application/admin\view\information\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.010894s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011053s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_information` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_information` WHERE (  `id` = 2 ) AND `fa_information`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.000337s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/ajax/lang?callback=define&controllername=information&lang=zh-cn&v=1607417992&v=1607417992
+[运行时间：0.027311s] [吞吐率：36.62req/s] [内存消耗：4,051.99kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001019s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000232s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'information',
+  'lang' => 'zh-cn',
+  'v' => '1607417992',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001188s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\waibao\xgrx\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000157s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.049740s] [吞吐率：20.10req/s] [内存消耗：5,098.63kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001076s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000231s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '184',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110000',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110000',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '1',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001218s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000462s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001081s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110000) LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110000) ORDER BY FIELD(`id`, 110000) LIMIT 0,999999 [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.061028s] [吞吐率：16.39req/s] [内存消耗：5,144.25kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001098s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000236s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '203',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '16',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '16',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000893s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000450s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (16) LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (16) ORDER BY FIELD(`id`, 16) LIMIT 0,999999 [ RunTime:0.000245s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.076956s] [吞吐率：12.99req/s] [内存消耗：5,098.64kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001040s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000240s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '207',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110100',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110100',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '2',
+    'pid' => '110000',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001027s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000424s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110100) LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110100) ORDER BY FIELD(`id`, 110100) LIMIT 0,999999 [ RunTime:0.000294s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:52+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.093951s] [吞吐率：10.64req/s] [内存消耗：5,144.26kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001312s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000284s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '208',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '18',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '18',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '110100',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001056s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000419s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000973s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (18) LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (18) ORDER BY FIELD(`id`, 18) LIMIT 0,999999 [ RunTime:0.000313s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:53+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.054242s] [吞吐率：18.44req/s] [内存消耗：5,110.01kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001003s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000216s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '213',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'level' => '2',
+    'pid' => '110000',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000871s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000415s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010633s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  (  `level` = 2  AND `pid` = 110000 ) LIMIT 1 [ RunTime:0.000988s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  (  `level` = 2  AND `pid` = 110000 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001165s ]
+---------------------------------------------------------------
+[ 2020-12-08T16:59:54+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.048392s] [吞吐率：20.66req/s] [内存消耗：5,148.69kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001071s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000225s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '222',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '110100',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000854s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000422s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011340s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 110100 ) LIMIT 1 [ RunTime:0.000341s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:18+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/information/edit/ids/2?dialog=1
+[运行时间：0.045945s] [吞吐率：21.77req/s] [内存消耗：5,264.51kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001301s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000335s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'information',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '2',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001055s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ E:\waibao\xgrx\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] E:\waibao\xgrx\public/../application/admin\view\information\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000195s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_information` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_information` WHERE (  `id` = 2 ) AND `fa_information`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.000388s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:18+08:00 ] 127.0.0.1 GET xgrx.test/admin11.php/ajax/lang?callback=define&controllername=information&lang=zh-cn&v=1607418018&v=1607418018
+[运行时间：0.051145s] [吞吐率：19.55req/s] [内存消耗：4,051.99kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001217s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000286s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'information',
+  'lang' => 'zh-cn',
+  'v' => '1607418018',
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001235s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\waibao\xgrx\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/information.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000206s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-08T17:00:19+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.066663s] [吞吐率：15.00req/s] [内存消耗：5,098.63kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001591s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000439s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '184',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110000',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110000',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '1',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001118s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000525s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011035s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110000) LIMIT 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110000) ORDER BY FIELD(`id`, 110000) LIMIT 0,999999 [ RunTime:0.000210s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:19+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.084907s] [吞吐率：11.78req/s] [内存消耗：5,144.26kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001344s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000287s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '204',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '18',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '18',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '16',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000969s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000478s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000783s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (18) LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (18) ORDER BY FIELD(`id`, 18) LIMIT 0,999999 [ RunTime:0.000207s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:19+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/region/index
+[运行时间：0.102199s] [吞吐率：9.78req/s] [内存消耗：5,098.64kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001094s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000238s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'region',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '207',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '110100',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '110100',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'level' => '2',
+    'pid' => '110000',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000956s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/region.php
+[ info ] [ RUN ] app\admin\controller\Region->index[ E:\waibao\xgrx\application\admin\controller\Region.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000523s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000769s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_region` [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_region` WHERE  `id` IN (110100) LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_region` WHERE  `id` IN (110100) ORDER BY FIELD(`id`, 110100) LIMIT 0,999999 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:19+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.130404s] [吞吐率：7.67req/s] [内存消耗：5,144.25kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001547s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000332s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '203',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'searchTable' => 'tbl',
+  'searchKey' => 'id',
+  'searchValue' => '16',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'showField' => 'name',
+  'keyField' => 'id',
+  'keyValue' => '16',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '0',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001035s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000504s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010587s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (16) LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (16) ORDER BY FIELD(`id`, 16) LIMIT 0,999999 [ RunTime:0.000303s ]
+---------------------------------------------------------------
+[ 2020-12-08T17:00:19+08:00 ] 127.0.0.1 POST xgrx.test/admin11.php/category/selectpage
+[运行时间：0.071657s] [吞吐率：13.96req/s] [内存消耗：5,156.36kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001161s ]
+[ info ] [ LANG ] E:\waibao\xgrx\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000237s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'selectpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1hvqjenheuskm98rjpcdnqu14u; keeplogin=1%7C86400%7C1607478128%7C94ebe7d7da3de4e7085c2d603763eb44; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36 SE 2.X MetaSr 1.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://xgrx.test',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '218',
+  'connection' => 'keep-alive',
+  'host' => 'xgrx.test',
+)
+[ info ] [ PARAM ] array (
+  'q_word' => 
+  array (
+    0 => '',
+  ),
+  'pageNumber' => '1',
+  'pageSize' => '10',
+  'andOr' => 'OR ',
+  'orderBy' => 
+  array (
+    0 => 
+    array (
+      0 => 'name',
+      1 => 'ASC',
+    ),
+  ),
+  'searchTable' => 'tbl',
+  'showField' => 'name',
+  'keyField' => 'id',
+  'searchField' => 
+  array (
+    0 => 'name',
+  ),
+  'name' => '',
+  'custom' => 
+  array (
+    'type' => 'information',
+    'pid' => '16',
+  ),
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000862s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\waibao\xgrx\public/../application/admin/lang/zh-cn/category.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Category->selectpage[ E:\waibao\xgrx\application\admin\controller\Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000432s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009801s ] mysql:host=127.0.0.1;dbname=xgrx;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 16 ) LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `type` = 'information'  AND `pid` = 16 ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000410s ]

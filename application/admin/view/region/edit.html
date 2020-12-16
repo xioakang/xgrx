@@ -1,0 +1,70 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pid" class="form-control" name="row[pid]" type="number" value="{$row.pid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-sname" class="form-control" name="row[sname]" type="text" value="{$row.sname|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Level')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-level" class="form-control" name="row[level]" type="number" value="{$row.level|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Citycode')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-citycode" class="form-control" name="row[citycode]" type="text" value="{$row.citycode|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Yzcode')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-yzcode" class="form-control" name="row[yzcode]" type="text" value="{$row.yzcode|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Mername')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-mername" class="form-control" name="row[mername]" type="text" value="{$row.mername|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lng')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-Lng" class="form-control" name="row[Lng]" type="number" value="{$row.Lng|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-Lat" class="form-control" name="row[Lat]" type="number" value="{$row.Lat|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pinyin')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pinyin" class="form-control" name="row[pinyin]" type="text" value="{$row.pinyin|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
