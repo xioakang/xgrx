@@ -14,5 +14,8 @@ return [
     'Weigh'                              => '权重',
     'Category warmtips'                  => '温馨提示：栏目类型请前往<b>常规管理</b>-><b>系统配置</b>-><b>字典配置</b>中进行管理',
     'Can not change the parent to child or itself' => '父组别不能是它的子组别或它自己',
-    'Status'                             => '状态'
+    'Status'                             => '状态',
+     'Province_id'   => '省',
+    'City_id'  => '市',
+    'Area_id'  => '区/县',
 ];

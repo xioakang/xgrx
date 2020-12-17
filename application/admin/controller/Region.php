@@ -56,7 +56,7 @@ class Region extends Backend
             $list = $this->model
 
                     ->where($where)
-                    ->order($sort, $order)
+                    ->order('id')
                     ->paginate($limit);
 
             foreach ($list as $row) {

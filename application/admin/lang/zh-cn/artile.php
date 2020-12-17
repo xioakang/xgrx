@@ -15,5 +15,6 @@ return [
     'Updatetime'         => '更新时间',
     'Deletetime'         => '删除时间',
     'Weigh'              => '权重',
-    'Province_city'              => '省,市'
+    'Province_city'              => '省,市',
+    'Area_id'  => '区/县',
 ];

@@ -23,4 +23,5 @@ return [
     'Province_city'  => '省,市',
     'Category'  => '分类',
     'Subcategory'  => '二级分类',
+    'Area_id'  => '区/县',
 ];
