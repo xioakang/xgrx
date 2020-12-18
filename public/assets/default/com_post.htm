@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/post.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../libs/web/jquery.js"></script>
+<script type="text/javascript" src="../libs/web/common.js"></script>
+<script type="text/javascript" src="../libs/web/validator/validator.min.js"></script>
+<link href="../libs/web/validator/validator.css" type="text/css" rel="stylesheet" />
+</head>
+{splitword()}
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+	<form name="post" id="form_post" action="" method="post" enctype="multipart/form-data">
+	<div id="content">
+		<div class="thd clearfix"><b>�������裺</b><span>1.ѡ����ҵ����</span><span class="current">2.��д��ҵ�������</span><span>3.�������</span></div>
+
+		<div class="fbd">
+			<div class="edit_box">
+				<ul>
+					<li><span class="span_1">&nbsp;</span><span class="span_2" style="font-size:12px;">����ip��ַ�ǣ�<span class="red_skin">{$ip}</span>������д��ʵ��ҵ��Ϣ</span></li>
+					<li><span class="span_1">��ѡ���</span><span class="span_2"><b>{$com_catinfo[catname]}</b>��> <a href="postcom.php"> ������ѡ���</a></span></li>
+					<li><span class="span_1">*ѡ�������</span><span class="span_2">
+					<select name=areaid id="areaid">
+					<option value=0>��ѡ�����</option>
+					{$area_option}
+					</select>
+					</span></li>
+					<li><span class="span_1">*��ҵ���ƣ�</span><span class="span_2" style="font-size:12px; color:#888;"><input id="comnane" name="comname"  type="text" size="58">
+					��Ҫ����40������</span></li>
+					<li><span class="span_1">*����ͼƬ��</span>
+					<span class="span_2"><input type="file" class="textInt" size="30" name="thumb" id="thumb" />
+					</span></li>
+
+					<li><span class="span_1">*Ӫҵʱ�䣺</span><span class="span_2" style="font-size:12px; color:#888;"><input id="hours" name="hours"  type="text" size="58"></span></li>
+
+					<li><span class="span_1">��ҵ���ܣ�</span><span class="span_2" style="font-size:12px; color:#888;"><textarea cols="115" rows="8" name="content" ></textarea>
+					<p></span></li>
+
+					<li><span class="span_1">��ҵͼƬ��</span><span class="span_2" style=" width: 650px;">
+					<input type="file" class="textInt" size="30" name="file1" />
+					<input type="file" class="textInt" size="30" name="file2" />
+					<input type="file" class="textInt" size="30" name="file3" />
+					<input type="file" class="textInt" size="30" name="file4" />
+					<input type="file" class="textInt" size="30" name="file5" />
+					<input type="file" class="textInt" size="30" name="file6" /><br>�����ϴ�6��ͼƬ��������500K��ͼƬ֧��jpg ��gif ��png��ʽ��
+					</span></li>
+
+					<li><span class="span_1">��ϵ�ˣ�</span><span class="span_2"><input type="text" class="textInt" size="30" name="linkman" value=""/></span></li>
+					<li><span class="span_1">��ϵQQ��</span><span class="span_2"><input type="text" class="textInt" size="30" name="qq" id="qq" value="{$member[qq]}"/></span> <span id="links">QQ���绰���ʼ�������дһ�</span></li>
+					<li><span class="span_1">��ϵ�绰��</span><span class="span_2"><input type="text" class="textInt" size="30" name="phone" id="phone" value="{$member[phone]}"/></span></li>
+					<li><span class="span_1">���棺</span><span class="span_2"><input type="text" class="textInt" size="30" name="fax" id="fax" value="{$member[fax]}"/></span></li>
+					<li><span class="span_1">�ʼ���</span><span class="span_2"><input type="text" class="textInt" size="30" name="email" id="email" value="{$member[email]}"/></span></li>
+					<li><span class="span_1">��ַ��</span><span class="span_2"><input type="text" class="textInt" size="60" name="address" /></span></li>
+
+					{if $CFG[map]}
+					<script type="text/javascript" src="../libs/web/msgbox/msgbox.js"></script>
+					<link href="../libs/web/msgbox/msgbox.css" type="text/css" rel="stylesheet" />
+					<li><span class="span_1">��ͼ��</span><span class="span_2"><input id='mappoint'class="textInt"  name='mappoint' type=text value="{$member[mappoint]}" size="30" /> <input name="markmap" type="button" value="��ע��ͼ" class="gray" onclick="Yubox.win('do.php?act=small_map&mark=1&width=500&height=250&p={$CFG[map]}',500,340,'��ע��ͼ',null,null,null,true);"></span></li>
+					{/if}
+					<li><span class="span_1">&nbsp;</span><span class="span_2">
+					<input type="image" src="templates/{$CFG[tplname]}/images/fabu2_03.png" />
+					<input id="keyword" type="hidden" name="keyword" />
+					<input type="hidden" name="catid" value="{$catid}" />
+					<input type="hidden" name="act" value="postok" /></span></li>
+				</ul>
+		  </div>
+		</div>
+	</div>
+	<!-- ���� ���� -->
+	</form>
+	<!--{template footer}-->
+</div>
+<script type="text/javascript">
+$.validator("comname")
+.setTipSpanId("tip_span_comname")
+.setFocusMsg("4��18���֣�������д�绰���������")
+.setRequired("����д��ҵ����")
+.setServerCharset("UTF-8")
+.setStrlenType("symbol")
+.setMinLength(4, "��ҵ���Ʋ���4����")
+.setMaxLength(18, "��ҵ������������18����");
+
+$.validator("areaid")
+.setTipSpanId("tip_span_areaid")
+.setFocusMsg("��ѡ�����")
+.setRequired("��ѡ�����")
+.setServerCharset("UTF-8")
+.setStrlenType("symbol");
+
+$.validator("phone")
+//.setRequired("����ȷ��д�绰")
+.setTipSpanId("tip_span_phone")
+.setFocusMsg("����ȷ��д�绰���ֻ��á�-���ֿ�")
+.setRegexp(/^1[3458]\d{9}$|^(0\d{2,4}-)?[2-9]\d{6,7}(-\d{2,5})?$|^[48]00(-?\d){7,10}$/, "�绰��ʽ������87654321-001��400-1234-5678��138********", false)
+;
+
+$.validator("qq")
+.setTipSpanId("tip_span_qq");
+
+$.validator("email")
+.setRegexp(/^\w+((-|\.)\w+)*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/, "���������ʽ������myname@example.com", false)
+.setServerCharset("UTF-8")
+.setStrlenType("symbol");
+
+$('form').submit(function(){
+	if($('#phone').val()=='' && $('#qq').val()=='' && $('#email').val()=='') {
+		$('#links').html("<font color=red>QQ���绰���ʼ�������дһ�</font>");
+		$('#qq').focus();
+		return false;
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# Helicon ISAPI_Rewrite configuration file
+# Version 3.1.0.82
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^index\.html$ index\.php
+RewriteRule ^xk_([0-9]+)\.html$ category\.php\?id=$1
+RewriteRule ^xk_([0-9]+)-page-([0-9]+)\.html$ category\.php\?id=$1&page=$2
+RewriteRule ^xk_([0-9]+)-area-([0-9]+)\.html$ category\.php\?id=$1&area=$2
+RewriteRule ^xk_([0-9]+)-area-([0-9]+)-page-([0-9]+)\.html$ category\.php\?id=$1&area=$2&page=$3
+RewriteRule ^xk_info_([0-9]+)\.html$ view\.php\?id=$1
+RewriteRule ^about-([0-9]+)\.html$ about\.php\?id=$1
+RewriteRule ^bianmin\.html$ bianmin\.php
+
+RewriteRule ^help\.html$ help\.php\?act=list
+RewriteRule ^help-list-([0-9]+)\.html$ help\.php\?act=list&typeid=$1
+RewriteRule ^help-list-([0-9]+)-page-([0-9]+)\.html$ help\.php\?act=list&typeid=$1&page=$2
+RewriteRule ^help-page-([0-9]+)\.html$ help\.php\?act=list&page=$1
+RewriteRule ^help-view-([0-9]+)\.html$ help\.php\?act=view&id=$1
+
+RewriteRule ^article$|^article\.html$ article\.php\?act=list
+RewriteRule ^article-list-([0-9]+)-page-([0-9]+)\.html$ article\.php\?act=list&typeid=$1&page=$2
+RewriteRule ^article-list-([0-9]+)\.html$ article\.php\?act=list&typeid=$1
+RewriteRule ^article-page-([0-9]+)\.html$ article\.php\?act=list&page=$1
+RewriteRule ^article_([0-9]+)\.html$ article\.php\?act=view&id=$1
+
+RewriteRule ^com\.html$ com\.php
+RewriteRule ^com-list-([0-9]+)\.html$ com\.php\?act=list&catid=$1
+RewriteRule ^com-list-([0-9]+)-page-([0-9]+)\.html$ com\.php\?act=list&page=$1
+RewriteRule ^com-list-([0-9]+)-area-([0-9]+)\.html$ com\.php\?act=list&catid=$1&area=$2
+RewriteRule ^com-list-([0-9]+)-area-([0-9]+)-page-([0-9]+)\.html$ com\.php\?act=list&catid=$1&area=$2&page=$3
+RewriteRule ^com-area-([0-9]+)\.html$ com\.php\?act=list&area=$1
+RewriteRule ^com-view-([0-9]+)\.html$ com\.php\?act=view&id=$1

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/user.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/useredit.css" type="text/css" rel="stylesheet" />
+<script src="../libs/web/common.js"></script>
+</head>
+<script>
+function chkedit(){
+	if(document.edit.title.value==""){
+		alert('��������Ϣ���⣡');
+		document.edit.title.focus();
+		return false;
+	}
+	if(document.edit.title.value.length>50 || document.edit.title.value.length<2){
+		alert('��Ϣ�����������2~30��֮��!');
+		document.edit.title.focus();
+		return false;
+	}
+	if(document.edit.areaid.value==0){
+		alert('��ѡ�������');
+		document.edit.areaid.focus();
+		return false;
+	}
+	if(document.edit.linkman.value==""){
+		alert('����д��ϵ�ˣ�');
+		document.edit.linkman.focus();
+		return false;
+	}
+	if(document.post.content.value==""){
+		alert('���ݲ���Ϊ�գ�');
+		document.post.content.focus();
+		return false;
+	}
+	if(document.edit.phone.value=="" && document.edit.qq.value=="" && document.edit.email.value==""){
+		alert('��ϵ��ʽ������дһ�');
+		document.edit.phone.focus();
+		return false;
+	}
+	if(document.edit.phone.value!="" && document.edit.phone.value<7){
+		alert('�绰��������7λ');
+		document.edit.phone.focus();
+		return false;
+	}
+	if(isNaN(document.edit.phone.value)){
+		alert('�绰����������');
+		document.edit.phone.focus();
+		return false;
+	}
+	if(document.edit.qq.value!="" && document.edit.qq.value<5){
+		alert('qq�������5λ');
+		document.edit.qq.focus();
+		return false;
+	}
+
+	if(document.edit.qq.value!="" &&  isNaN(document.edit.qq.value)){
+		alert('qq����������');
+		document.edit.qq.focus();
+		return false;
+	}
+}
+</script>
+<Style>
+#picsst{ width:100%; margin:0;}
+#picsst ul{width:100%;margin:0;padding:0; }
+#picsst ul li{ clear:none;margin:0;width:210px; float:left;border-bottom:none;}
+</style>
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+	<div id="content" class="clearfix">
+		<div class="col_main">
+			<div class="edit_box">
+			<div id="contentfloat">
+        <div id="content">
+
+<div class="bigtitle">�޸���Ϣ</div>
+<table width="100%" cellpadding="0" cellspacing="0" class="tx_box">
+	<tr>
+		<td valign="top" style="width:70px; text-align:center;"><img src="templates/{$CFG[tplname]}/images/icon1.gif" width="53" height="53" alt="" /></td>
+		<td class="tx_title"><span>��Ҫ��ʾ��</span><br />�������ݣ��� * Ϊ������
+
+		<br />
+		</td>
+	</tr>
+</table>
+<br />
+  <form name="post" method="post" onSubmit="return chkedit()" action="member.php" enctype="multipart/form-data">
+<table border="0" cellpadding="1" cellspacing="1" class="table" width="100%">
+	<tr >
+      <td class="tditem" height="25">��Ϣ����<font color="#FF0000">*</font>��
+      </td>
+      <td   class="tdcontent" colspan=3> <input name="title" type="text" size="50" value="{$title}" class="text"></td>
+    </tr>
+	<tr >
+      <td class="tditem"  height="25" width=13%>ѡ�����<font color="#FF0000">*</font>��
+      </td>
+      <td class="tdcontent" width=40%>
+		<select name=areaid id="areaid">
+		<option value=0>��ѡ�����</option>
+		{$info_area}
+		</select>
+	  </td>
+	  <td class="tditem" height="25"><font color="#FF0000"></font>
+      </td>
+      <td  class="tdcontent"></td>
+    </tr>
+	<tr >
+      <td  class="tditem" height="25">�������ԣ�
+      </td>
+      <td class="tdcontent" colspan="3">
+		{loop $custom $item}
+		{$item[cusname]}��{$item[html]} </br>
+		{/loop}
+	  </td>
+    </tr>
+	<tr >
+      <td  class="tditem" height="25">��������<font color="#FF0000">*</font>��
+      </td>
+      <td class="tdcontent" colspan="3"> <textarea name="content" class="text" style="width:600px;height:260px;">{$content}</textarea></td>
+    </tr>
+
+      <td  class="tditem" height="25">��ϵ��<font color="#FF0000">*</font>��
+      </td>
+      <td class="tdcontent" > <input type="text" name="linkman" value="{$linkman}" class="text"></td>
+	   <td class="tditem"  height="25">��ϵ�绰��
+      </td>
+      <td class="tdcontent" > <input type="text" name="phone" value="{$phone}" class="text"></td>
+    </tr>
+	<tr >
+      <td  class="tditem" height="25">�ʼ���
+      </td>
+      <td class="tdcontent" > <input type="text" name="email" value="{$email}" class="text" size=50 ></td>
+	   <td  class="tditem" height="25">��ϵQQ��
+      </td>
+      <td class="tdcontent" > <input type="text" name="qq" value="{$qq}" class="text"></td>
+    </tr>
+	<tr>
+      <td class="tditem" height="25">��ϵ��ַ��
+      </td>
+      <td class="tdcontent" colspan="3"><input name="address" type="text" id="address" class="text" size=50 value="{$address}"/></td>
+    </tr>
+	<? if($mappoint){?>
+	<script type="text/javascript" src="../libs/web/msgbox/msgbox.js"></script>
+	<link href="../libs/web/msgbox/msgbox.css" type="text/css" rel="stylesheet" />
+	<tr>
+      <td  class="tditem" height="25">��ͼ��ע��
+      </td>
+      <td class="tdcontent" colspan="3"><input id='mappoint' name='mappoint' type=text  class="text" maxLength=50 value="<?=$mappoint?>" >
+	<input name="markmap" type="button" value="��ע��ͼ" class="pingbut" onclick="Yubox.win('do.php?act=small_map&mark=1&width=500&height=250&p={$mappoint}',500,340,'��ע��ͼ',null,null,null,true);"></td>
+    </tr>
+	<?}?>
+</table>
+<div class="submit">
+<input type="hidden" name="id" value="<?=$id?>" />
+<input type="hidden" name="act" value="updateinfo" />
+<input type="hidden" name="thumb" value="<?=$thumb?>" />
+<input type="submit" name="submit" value=" ȷ�������ύ " id="submit" class="okbut"/>
+    </div>
+</form>
+        </div>��
+	</div>
+			</div>
+		</div>
+		<div class="col_sub">
+			<!-- ������˵� ��ʼ -->
+			<div class="side_bar">
+				<ul>
+					<!--{template member_left}-->
+				</ul>
+			</div>
+			<!-- ������˵� ���� -->
+		</div>
+	</div>
+	</form>
+	<!-- ���� ���� -->
+	<!--{template footer}-->
+</div>
+</body>
+</html>

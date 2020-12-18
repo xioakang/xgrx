@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/post.css" type="text/css" rel="stylesheet" />
+<script src="../libs/web/common.js"></script>
+<script type="text/javascript" src="../libs/web/jquery.js"></script>
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+	<div id="content">
+		<div class="thd clearfix"><b>�������裺</b><span class="current">1.ѡ�����</span><span>2.��д����</span><span>3.�������</span></div>
+		<div class="fbd">
+
+			<div class="infoxookee">
+				<!--{loop $cats $cat}-->
+				<ul class="clearfix">
+					<div class="infobt">{$cat['catname']}��</div>
+					<!--{if !empty($cat[children])}-->
+						<!--{loop $cat[children] $chi}-->
+						<li><a href="{$CFG[postfile]}?act=post&id=<?=$chi['id']?>" >{$chi['name']}</a></li>
+						<!--{/loop}-->
+					<!--{/if}-->
+				</ul>
+				<!--{/loop}-->
+			</div>
+		</div>
+	</div>
+	<!-- ���� ���� -->
+
+</div><div id="mask" style="display:none"></div>
+<!--{template footer}-->
+</body>
+</html>

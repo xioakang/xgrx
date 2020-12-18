@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/post.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../libs/web/jquery.js"></script>
+<script type="text/javascript" src="../libs/web/common.js"></script>
+<script type="text/javascript" src="../libs/web/validator/validator.min.js"></script>
+<link href="../libs/web/validator/validator.css" type="text/css" rel="stylesheet" />
+</head>
+{splitword()}
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+	<form name="post" action="{$CFG['postfile']}" method="post" enctype="multipart/form-data">
+	<div id="content" >
+		<div class="thd clearfix"><b>�������裺</b><span>1.ѡ�����</span><span class="current">2.��д����</span><span>3.�������</span></div>
+		<div class="fbd">
+			<div class="edit_box">
+				<ul>
+					<li><span class="span_1">&nbsp;</span><span class="span_2" style="font-size:12px;">����ip��ַ�ǣ�<span class="red_skin">{$ip}</span>������ʵ��д��Ϣ����</span></li>
+					<li><span class="span_1">��ѡ���</span><span class="span_2"><b>{$catinfo[catname]}</b>��> <a href="{$CFG['postfile']}"> ������ѡ���</a></span></li>
+					<li><span class="span_1">*ѡ�������</span><span class="span_2">
+					<select name=areaid id="areaid" class="fabuselect">
+					<option value=''>��ѡ�����</option>
+					{$area_option}
+					</select>
+					</span><span id="c_area"></span></li>
+					<li><span class="span_1">*��Ϣ���⣺</span><span class="span_2" style="font-size:12px; color:#888;"><input id="title" name="title"  type="text" size="58" class="fabuinput"></span><span id="c_title"></span></li>
+
+					{loop $custom $item}
+					<li><span class="span_1">{$item[cusname]}��</span><span class="span_2">{$item[html]}</span></li>
+					{/loop}
+
+					<li><span class="span_1">��Ϣ���ݣ�</span><span class="span_2" style="font-size:12px; color:#888;"><textarea cols="115" rows="8" name="content"  class="fabutxt"></textarea>
+					<p></span><span id="c_content"></span></li>
+
+					<li><span class="span_1">�ϴ�ͼƬ��</span>
+					<span class="span_2" style="width:800px">
+					<input type="file" class="textInt23" size="20" name="file1" />&nbsp;
+					<input type="file" class="textInt23" size="20" name="file2" />&nbsp;
+					<input type="file" class="textInt23" size="20" name="file3" />&nbsp;
+					<br><font color="#999999">�����ϴ�3��ͼƬ��������500K��ͼƬ֧��jpg ��gif ��png��ʽ��</font>
+					</span>
+					</li>
+					{if $_userid}
+					<li><span class="span_1">�ö���</span><span class="span_2">
+					<input type="radio" id="is_top" name="is_top" value="0" checked  onclick="check_info_gold()"/>&nbsp;���ö�
+					<input type="radio" id="is_top" name="is_top" value="1" onclick="check_info_gold()"/>&nbsp;�����ö�
+					<input type="radio" id="is_top" name="is_top" value="2" onclick="check_info_gold()"  style="display:none;"/>
+					<input id="number" name="number"  type="text" size="6" value='' onblur="check_info_gold()" onKeyUp="value=value.replace(/\D+/g,'')" /> ��
+					&nbsp;&nbsp;��ÿ��<font color="red">{$CFG['info_top_gold']}</font>��Ϣ�ҡ�&nbsp;&nbsp;&nbsp;&nbsp;<span id="c_top"></span></span>
+					</li>
+					<script type="text/javascript">
+					function check_info_gold()
+					{
+						var temp=document.getElementsByName("is_top");
+						for (i=0;i<temp.length;i++) {
+							if(temp[i].checked)is_top = temp[i].value;
+						}
+						if(is_top == 0) {
+							$("#c_top").html("");
+							return false;
+						}
+						if($("#number").val()>0 && is_top>0) {
+							$.post(
+								'member.php?act=check_info_gold',
+								{is_top:$("#is_top").val(),number:$("#number").val()},
+								function (data) {
+									eval('arrstr='+data+';');
+									if(arrstr.gold<0) {
+										document.getElementById('is_top').checked='0';
+										$("#c_top").html("<font color=red>����</font>");
+									} else {
+										$("#c_top").html("����<font color='red'>"+arrstr.kou+"</font>��Ϣ��");
+									}
+								}
+							)
+						}
+					}
+					</script>
+					{/if}
+
+                    <li style="display:none"><span class="span_1">���䣺</span><span class="span_2"><input type="text" class="fabuinput" size="30" name="email" value=""/></span><span id="c_linkman"></span></li>
+                     <li style="display:none"><span class="span_1">��ַ��</span><span class="span_2"><input type="text" class="fabuinput" size="30" name="address" value=""/></span><span id="c_linkman"></span></li>
+
+
+
+					<li><span class="span_1">��ϵ�ˣ�</span><span class="span_2"><input type="text" class="fabuinput" size="30" name="linkman" value=""/></span><span id="c_linkman"></span></li>
+
+                    <li><span class="span_1">��ϵ�绰��</span><span class="span_2"><input type="text" class="fabuinput" size="30" name="phone" id="phone" value="{$member[phone]}"/></span> <span id="c_phone"></span></li>
+					<li style="display:none;"><span class="span_1">��ϵQQ��</span><span class="span_2"><input type="text" class="fabuinput" size="30" name="qq" id="qq" value="{$member[qq]}"/></span> <span id="c_qq"></span></li>
+					<li><span class="span_1">��Ч�ڣ�</span><span class="span_2"><input name=enddate type=text id=enddate value="" size="8" class="sfabuinput">
+					�� (������Ϊ������Ч)</span></li>
+					<li><span class="span_1">ɾ�����룺</span><span class="span_2"><input type="password"  class="sfabuinput" size="30" id="password" name="password" /></span><span id="c_password"></span></li>
+
+					{if $CFG[map]}
+					<script type="text/javascript" src="../libs/web/msgbox/msgbox.js"></script>
+					<link href="../libs/web/msgbox/msgbox.css" type="text/css" rel="stylesheet" />
+					<li><span class="span_1">��ͼ��</span><span class="span_2"><input id='mappoint' class="fabuinput"  name='mappoint' type=text value="{$member[mappoint]}" size="30" /> <input name="markmap" type="button" value="��ע��ͼ" class="pingbut" onclick="Yubox.win('do.php?act=small_map&mark=1&width=500&height=250&p={$CFG[map]}',500,340,'��ע��ͼ',null,null,null,true);"></span></li>
+					{/if}
+					<li><span class="span_1">*������֤��</span>
+					<span class="span_2">
+					<input type="text" name="answer" id="answer" size="30"  class="sfabuinput"/>���⣺{$verf[question]}��
+					<input type="hidden" id="vid" name="vid" value={$verf[vid]} /></span>
+					</li>
+					<li><span class="span_1">&nbsp;</span>
+					<span class="span_2">
+					<input type="submit" value="��������" class="okbut"/>
+					<input type="hidden" name="catid" value="{$catid}" />
+					<input type="hidden" name="act" value="postok" />
+					</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- ���� ���� -->
+	</form>
+
+</div><!--{template footer}-->
+<script type="text/javascript">
+$.validator("title")
+.setTipSpanId("tip_span_title")
+.setFocusMsg("4��38���֣�������д�绰���������")
+.setRequired("����д����")
+.setServerCharset("UTF-8")
+.setStrlenType("symbol")
+.setMinLength(4, "���ⲻ��4����")
+.setMaxLength(38, "����������������38����");
+
+$.validator("areaid")
+.setTipSpanId("tip_span_areaid")
+.setFocusMsg("��ѡ�����")
+.setRequired("��ѡ�����")
+.setServerCharset("UTF-8")
+.setStrlenType("symbol");
+
+$.validator("phone")
+.setTipSpanId("tip_span_phone")
+.setFocusMsg("����ȷ��д�绰���ֻ��á�-���ֿ�")
+.setRegexp(/^1[3458]\d{9}$|^(0\d{2,4}-)?[2-9]\d{6,7}(-\d{2,5})?$|^(?!\d+(-\d+){3,})[48]00(-?\d){7,10}$/, "�绰��ʽ������87654321-001��400-1234-5678��138********", false)
+.setCallback(chklink, "qq���绰������дһ��", '1');
+
+$.validator("qq")
+.setTipSpanId("tip_span_qq")
+.setCallback(chklink, "qq,�绰������дһ��", '1');
+
+$.validator("answer")
+.setRequired("����д������֤��")
+.setAjax("do.php?act=ver&vid="+$('#vid').val(), "�ش���ȷ��");
+
+function chklink() {
+	if($('#phone').val()=='' && $('#email').val()=='' && $('#qq').val()=='') {
+		return false;
+	} else {
+		return true;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+	<!-- ҳ�� -->
+<div id="clear" style="display:none;"></div>
+    <div class="dibtbg"></div>
+<div id="footer" class="clearfix">
+  <div class="foot_info">
+  <div class="foot_line">
+  <p class="foot_nav">
+  	<!--{loop $about $key $val}-->
+		<a href={$val[url]} target=_blank>{$val[title]}</a>
+		{if $key<(count($about)-1)} | {/if}
+	<!--{/loop}-->
+	 | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$CFG[weburl]?>');return(false);" style="cursor:pointer;">��Ϊ��ҳ</a>
+	<a href=javascript:window.external.AddFavorite('{$CFG[weburl]}','{$CFG[webname]}')>��Ϊ�ղ�</a> |  <a href="./wap">�ֻ���</a>
+	</p></div>
+
+   <div style="margin-top:20px; line-height:170%;">
+     <a href="{$CFG['weburl']}" target=_blank><strong>{$CFG['webname']}</strong></a>&copy; 2014-2020 {$CFG['weburl']} Inc.
+	<!--{if !empty($CFG['qq'])}-->
+	QQ:
+	<!--{loop $CFG['qq'] $qq}-->
+		<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$qq}&amp;Site={$CFG[webname]}&amp;Menu=yes" target="_blank"><img style="display:inline" src="http://wpa.qq.com/pa?p=1:{$qq}:4" height="16" border="0" alt="QQ" />{$qq}</a>
+	<!--{/loop}-->
+	<!--{/if}--><br />
+	{$CFG['copyright']}&nbsp;&nbsp;<Br /> ICP�����ţ�<a href=http://www.waiwaili.com target=_blank>{$CFG[icp]}</a>&nbsp;&nbsp; <!--{if $CFG['count']}-->
+	{$CFG[count]}  <a href="rss.php">RSS��ͼ</a>  <a href="sitemap.xml">վ���ͼ</a>&nbsp;&nbsp;   <a href="http://www.waiwaili.com">���������̳</a>
+	<!--{/if}-->
+
+    </div>
+
+
+
+</div>
+<script type="text/javascript" src="../libs/web/navtop.js"></script>
+ <div id="clear"></div><div id="code"></div><div id="code_img"></div><a id="gotop" href="javascript:void(0)"></a>
+<!-- ҳ�� ���� -->

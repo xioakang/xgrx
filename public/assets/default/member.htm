@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/user.css" type="text/css" rel="stylesheet" />
+<script src="../libs/web/common.js"></script>
+<script type="text/javascript" src="../libs/web/jquery.js"></script>
+</head>
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+	<div id="content" class="clearfix">
+    <div class="m_title_h"><div class="dh_list"><b>��Ա��������</b><span></span></div></div>
+		<div class="col_main">
+			<!-- ��Ա���� ��ʼ -->
+			<div class="user_info clearfix">
+				<div class="pic"></div>
+				<div class="info_cont">
+					<p>�𾴵Ļ�Ա��<span class="blue_skin">{$_username}</span>������</p>
+					<p>ע��ʱ�䣺{date('Y-m-d H:i:s',$userinfo['registertime'])}����<span style="color:#999;">����½��{date('Y-m-d H:i:s',$userinfo['lastlogintime'])}</span></p>
+					<p><a href="member.php?act=modify" class="guishubut">��������</a><a href="member.php?act=edit_password"  class="guishubut">�޸�����</a></p>
+				</div>
+
+			</div>
+			<!-- ��Ա���� ���� -->
+			<!-- ������Ϣ ��ʼ -->
+			<div class="count_box">
+				<div class="hd">������Ϣ</div>
+				<div class="bd">
+					<p>���ƣ�<b>{$userinfo['username']}</b></p>
+					<p>���֣�<b>{$userinfo['credit']}</b> �� ��<a href="member.php?act=credit_rule">�˽���ֹ���</a>��</p>
+					<p>��Ϣ�ң�<b>{$userinfo['gold']}</b> ö ��<a href="member.php?act=gold">����/�һ�</a>��</p>
+					<p>�ʽ�<b>{$userinfo['money']}</b> Ԫ ��<a href="member.php?act=payonline">��ֵ</a>��</p>
+					<p>
+					���䣺<b>{$userinfo['email']}</b> {if !$status}<a href='member.php?act=send_check_email'>����֤���䡿</a>{/if}&nbsp;&nbsp;
+					�绰��<b>{$userinfo['phone']}</b> &nbsp;&nbsp;
+					QQ��<b>{$userinfo['qq']}</b>
+					</p>
+					<p>��ַ��<b>{$userinfo['address']}</b></p>
+					<!--{if $notice}-->
+					<p>��ȫ���ϣ�������Ϣ�����㡣<a href="member.php?act=modify"><font color=red>[��˲�ȫ����]</font></a></p>
+					<!--{/if}-->
+
+				</div>
+			</div>
+			<!-- �ҵ�ͳ�� ���� -->
+
+		</div>
+		<div class="col_sub">
+			<!-- ������˵� ��ʼ -->
+			<div class="side_bar">
+				<ul>
+					<!--{template member_left}-->
+				</ul>
+			</div>
+			<!-- ������˵� ���� -->
+		</div>
+	</div>
+	<!-- ���� ���� -->
+	<!--{template footer}-->
+</div>
+</body>
+</html>

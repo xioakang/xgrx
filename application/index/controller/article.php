@@ -28,18 +28,11 @@ class Article extends Frontend
         $page = request()->param('page','1');
         $limit = request()->param('limit','10');
 
-        $where = [];
-        if(!empty($search)){
-            $where['title'] = ['like', '%'.$search.'%'];
-            $where['maincontent'] = ['like', '%'.$search.'%'];
-        }
-        $data = Db::name('information')
-            ->whereOr($where)
+        $data = Db::name('article')
             ->limit($page,$limit)
             ->order('createtime desc')
             ->select();
-        $count = Db::name('information')
-            ->whereOr($where)
+        $count = Db::name('article')
             ->count();
         $lists =  [
             'page'=>$page,

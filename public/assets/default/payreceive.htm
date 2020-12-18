@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<title>{$seo['title']}</title>
+<meta name="Keywords" content="{$seo['keywords']}">
+<meta name="Description" content="{$seo['description']}">
+<link href="templates/{$CFG[tplname]}/style/reset.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/style.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/user.css" type="text/css" rel="stylesheet" />
+<link href="templates/{$CFG[tplname]}/style/useredit.css" type="text/css" rel="stylesheet" />
+<script src="../libs/web/common.js"></script>
+<script type="text/javascript" src="../libs/web/jquery.js"></script>
+</head>
+<body class="home-page">
+<!--{template header}--><div class="wrapper">
+	<!-- ���� -->
+<form action="member.php?act=send" method="post" name=form>
+	<div id="content" class="clearfix">
+		<div class="col_main">
+			<div class="edit_box">
+			<div id="contentfloat">
+        <div id="contentt">
+<div class="bigtitle">����֧��</div>
+
+<div class="smalltitle">�޸�ע����Ϣ</div>
+<table border="0" cellpadding="1" cellspacing="1" class="table" width="100%">
+    <tr>
+        <td class="tditem">�����ţ�</td>
+        <td class="tdcontent">
+            <span style="color:#666600;font-weight:bold;">{$orderid}</span></td>
+    </tr>
+	<tr>
+        <td class="tditem">֧����</td>
+        <td class="tdcontent">
+            <span style="color:#666600;font-weight:bold;">
+			{$total_amount}Ԫ
+			</span>
+		</td>
+    </tr><tr>
+        <td class="tditem">֧��ƽ̨��</td>
+        <td class="tdcontent">
+            <span style="color:#666600;font-weight:bold;">{$payonline_setting[$paycenter]["name"]}</span>
+		</td>
+    </tr>
+{if $paystatus==0}
+    <tr>
+      <td class="tditem">֧�������</td>
+      <td class="tdcontent">֧��ʧ��</td>
+    </tr>
+    <tr>
+      <td class="tditem">��ʾ��Ϣ��</td>
+      <td class="tdcontent">Md5У�����������ϵ����Ա����</td>
+    </tr>
+{elseif $paystatus==1}
+    <tr>
+      <td class="tditem">֧�������</td>
+      <td class="tdcontent"><font color="red">֧���ɹ�</font></td>
+    </tr>
+    <tr>
+      <td class="tditem">��ʾ��Ϣ��</td>
+      <td class="tdcontent">ϵͳ�Ѿ�������<font color='red'>�ʺų�ֵ{$amount}Ԫ</font>{if $trade_fee}��<font color='red'>�۳�������{$trade_fee}Ԫ</font>{/if}��</td>
+    </tr>
+{else}
+    <tr>
+      <td class="tditem">֧�������</td>
+      <td class="tdcontent">֧��ʧ��</td>
+    </tr>
+    <tr>
+      <td class="tditem">֧�������</td>
+      <td class="tdcontent">���Ǯ�Ѵ��������п�����������ϵ����Ա����</td>
+    </tr>
+{/if}
+
+</table>
+ </div>��
+	</div>
+			</div>
+		</div>
+		<div class="col_sub">
+			<!-- ������˵� ��ʼ -->
+			<div class="side_bar">
+				<ul>
+					<!--{template member_left}-->
+				</ul>
+			</div>
+			<!-- ������˵� ���� -->
+		</div>
+	</div>
+	</form>
+	<!-- ���� ���� -->
+	<!--{template footer}-->
+</div>
+</body>
+</html>
