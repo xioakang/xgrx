@@ -1,204 +1,261 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset={}" />
-    <title>{seo['title']}</title>
-    <meta name="Keywords" content="{}">
-    <meta name="Description" content="{seo['description']}">
-    <link href="assets/default/style/index.css" type="text/css" rel="stylesheet" />
-    <script src="assets/libs/web/common.js"></script>
-    <script src="assets/libs/web/hdpic.js"></script>
-    <script src="assets/libs/web/jquery.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>=分类信息网_广州同城生活门户，生活信息全网罗！_http://xk1.xookee.cn</title>
+  <meta name="Keywords" content="分类信息网,二手买卖,供求信息,信息发布网,免费发布信息,生活信息,行业信息">
+  <meta name="Description" content="=分类信息网为网民提供出租、招聘、求购、求租、搬迁、运输、二手交易、招生培训、婚介交友等各类信息的发布和查询,是您生活的好伴侣！">
+  <link href="static/css/index.css" type="text/css" rel="stylesheet">
+  <script src="static/js/common.js"></script>
+  <script type="text/javascript" src="assets/libs/web/jquery-1.7.2.js"></script>
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/hdpic.js"></script>
+  <script type="text/javascript" src="static/js/navtop.js"></script>
+  <script type="text/javascript" src="static/js/top.js"></script>
+
+
 </head>
-<body class="home-page">
-<!--{template header}-->
-<!-- 主体 -->
-<div class="adbox_1">  echo ads_list('1');?></div>
-<table width="1020" border="0" cellspacing="0" cellpadding="0" align="center" class="top_nv_bar">
-    <tr>
-        <td height="44" width="260" align="center"><iframe name="weather_inc" src="http://cache.xixik.com.cn/10/guangzhou/" width="240" height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true"></iframe></td><td width="460"><div class="font001">共有信息<span>=info_num?></span>条，商家信息<span>=com_num?></span>条，新闻资讯<span>=article_num?></span>条，注册会员<span>=member_num?></span>位</div></td><td width="290" align="left"><div style="margin-left:18px;">热线电话：{CFG['phone']}QQ：<!--{loop CFG['qq'] qq}--><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={qq}&amp;Site={CFG[webname]}&amp;Menu=yes" target="_blank"><img style="display:inline" src="http://wpa.qq.com/pa?p=1:{qq}:4" height="16" border="0" alt="QQ" />{qq}</a>
-        <!--{/loop}--></div></td></tr></table>
-<table width="1020" border="0" cellspacing="0" cellpadding="0" align="center" class="title_index_top">
-    <tr>
-        <td width="260" valign="top" style="border-right:#eee 1px solid">
-            <script type=text/javascript>
-                <!--
-                var focus_width=260
-                var focus_height=286
-                var text_height=0
-                var swf_height = focus_height+text_height
-                var pics='=flash['image']?>'
-                var links='=flash['url']?>'
-                var texts='||||'
-                document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
-                document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/flashplay.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
-                document.write('<param name="menu" value="false"><param name="wmode" value="opaque">');
-                document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
-                document.write('<embed src="images/flashplay.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
-                document.write('</object>');
-                //-->
-            </script></td><td width="10"></td>
-        <td width="470" valign="top" class="title_index_1"><div id="ilist_news">
-            <h6><span><a href="article.php">更多>></a></span><a href="#"></a></h6>
-            <ul>
-                {loop articles val}
-                <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['pdate']}</span><a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-                {/loop}
-            </ul>
-        </div></td>
-        <td width="10"></td>
-        <td width="270" valign="top" class="title_index_2"><div id="ilist_ding">
-            <h6><span><a href=""></a></span><a href="#"></a></h6>
-            <ul>
-                {loop top_info val}
-                <li>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-                {/loop}
-            </ul>
-        </div></td>
-    </tr>
-</table>
 
-<!--商家展示-->
-<!--<div class="titlebg_114"><span style="float:right;"><div id="p_link_1"><a href="postcom.php">商家入驻</a></div><div id="p_link_2"><a href="com.php">更多商家</a></div></span></div>-->
-<!--<script type="text/javascript" src="assets/libs/web/jquery-1.7.2.js"></script>-->
-<!--<script src="assets/libs/web/scrollpic.js"></script>-->
-<!--<div class="wc960 row rowE">-->
-    <!--<div class="bd mt20">-->
-        <!--<div id="sca1" class="warp-pic-list">-->
-            <!--<div id="wrapBox1" class="wrapBox">-->
-                <!--<ul id="count1" class="count clearfix">-->
-                    <!--{php comi=1}-->
-                    <!--{loop coms val}-->
-                    <!--<li><a href="{val[url]}" class="img_wrap"><img src="{val[thumb]}" width="187" height="135" border="0" alt="{val[comname]}"></a>-->
-                        <!--<div class="text-area"><p>{val[sname]}</p><p>Tel：<span class="p-num">{val[phone]}</span></p></div>-->
-                    <!--</li>-->
-                    <!--{php comi++}-->
-                    <!--{/loop}-->
-                <!--</ul>-->
-            <!--</div>-->
-            <!--<a id="right1" class="prev icon btn"></a>-->
-            <!--<a id="left1" class="next icon btn"></a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<body>
+
+  <script src="static/js/baidutiaozhuan.js" type="text/javascript"></script>
+  <script type="text/javascript">uaredirect("/wap/");</script>
+  <div class="topall" id="topall">11111111111111</div>
 
 
 
-<script type="text/javascript">
-    (document).ready(function(){
+  <!-- 主体 -->
+  <!-- <div style="width:1200px; margin:10px auto;">
+    <script type="text/javascript" src="../../static/js/yanshi.js"></script>
+  </div> -->
 
-        ("#count1").dayuwscroll({
-            parent_ele:'#wrapBox1',
-            list_btn:'#tabT04',
-            pre_btn:'#left1',
-            next_btn:'#right1',
-            path: 'left',
-            auto:true,
-            time:3000,
-            num:5,
-            gd_num:5,
-            waite_time:1000
-        });
+  <div class="adbox_1"><a href="javascript:;" target="_blank"><img src="../../static/picture/200104101613voimzl.gif"
+        border="0" width="1200" height="90alt=横幅一"></a>
 
+  </div>
+  <script type="text/javascript" src="static/js/myfocus-2.0.4.min.js"></script>
+  <style type="text/css">
+    #myFocus3 {
+      width: 500px;
+      height: 266px;
+      margin: 10px;
+    }
+  </style>
+  <script type="text/javascript">
+    //设置
+    myFocus.set({
+      id: 'myFocus3',//ID
+      pattern: 'mF_slide3D'//风格
     });
-</script>
+  </script>
+  <table width="1200" border="0" cellspacing="0" cellpadding="0" align="center" class="title_index_top">
+    <tr>
+      <td width="350" valign="top" class="title_index_1">
+        <div id="top_news">
+          <h6><span><a href="article.html">更多>></a></span><a href="#"></a></h6>
+          <ul>
 
 
-<div class="adbox_1">  echo ads_list('2');?></div>
-<div style="margin:10px auto; width:100%;">
-    <div style=" margin:0 auto;width:1015px;border:#ddd 1px solid; background-color:#fff; padding:0px;">
+
+            {volist name="new_info" id="vo" offset='0' length='10'}
+            <li><span style="float:right; font-size:12px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span><a
+                    href="article-view_15.html" target="_blank" title="{$vo.first_title}">{$vo.title}</a></li>
+            {/volist}
+
+          </ul>
+        </div>
+      </td>
+      <td width="520" valign="top" class="top_nv_bar">
+        <div class="font001">共有信息<span>
+            {$info_num} </span>条，资讯<span>
+            {$member_num} </span>条，会员<span>
+            {$article_num} </span>位</div>
+        <div id="myFocus3">
+          <div class="pic">
+            <ul>
+              {volist name="flash" id="vo" offset='0' length='6'}
+              <li><a href="{$vo.url}"><img width="500" height="286" src="{$vo.image}"></a></li>
+              {/volist}
+            </ul>
+          </div>
+        </div>
+        <div style=" clear:both;"></div>
+      </td>
+      <td width="330" valign="top" class="title_index_2">
+        <div class="tel_qq" style="float:right">我要置顶：<a href="javascript:;" target="_blank"><img
+              src="../../static/picture/pa-2286349413452.jpg" border="0" alt="在线咨询">123456789</a>
+
+          &nbsp;&nbsp;</div>
+        <div id="index_ding">
+          <ul>
+
+            {volist name="top_info" id="vo" offset='0' length='10'}
+            <li>&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}"
+                         class="red">{$vo.title}</a></li>
+            {/volist}
 
 
-        <div id="ilist99" style="border-right:#e8e8e8 1px solid">
-            <h6><span><a href="category.php?id=1">更多最新</a></span><a href="category.php?id=1">招聘求职</a></h6><ul>
-            {loop $new_info_1 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
+
+
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="adbox_1">
+    <script type="text/javascript">
+      panshi_a = "3356737536_2557419520_1";
+      panshi_b = "1200_80_10";
+    </script>
+    <script type="text/javascript" src="../../static/js/show_ps3.js"></script>
+
+  </div>
+  <div style="margin:0px auto; width:100%;">
+    <div class="info_box">
+      <div id="info_list" style="border-right:#e8e8e8 1px solid">
+        <h6><span><a href="category-1.html">更多最新</a></span><a href="category-1.html">招聘求职</a></h6>
+        <ul>
+
+          {volist name="new_info_1" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
+
         </ul>
-        </div>
+      </div>
+      <div id="info_list" style="border-right:#e8e8e8 1px solid">
+        <h6><span><a href="category-2.html">更多最新</a></span><a href="category-2.html">房屋信息</a></h6>
+        <ul>
+          {volist name="new_info_2" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
 
-        <div id="ilist99" style="border-right:#e8e8e8 1px solid">
-            <h6><span><a href="category.php?id=2">更多最新</a></span><a href="category.php?id=2">房屋信息</a></h6><ul>
-            {loop new_info_2 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
+
         </ul>
-        </div>
+      </div>
+      <div id="info_list" style="border-right:#e8e8e8 0px solid; ">
+        <h6><span><a href="category-3.html">更多最新</a></span><a href="category-3.html">二手买卖</a></h6>
+        <ul>
 
-        <div id="ilist99" style="border-right:#e8e8e8 0px solid; width:339px;">
-            <h6><span><a href="category.php?id=3">更多最新</a></span><a href="category.php?id=3">二手买卖</a></h6><ul>
-            {loop new_info_3 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
+          {volist name="new_info_3" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
+
+
         </ul>
-        </div>
-        <div id="clear"></div>
-        <!-- <div class="ggbox2">  echo ads_list('3');?></div>主体 -->
-        <div id="clear"></div>
-        <div id="ilist99" style="border-right:#e8e8e8 1px solid">
-            <h6><span><a href="category.php?id=4">更多最新</a></span><a href="category.php?id=4">生活服务</a></h6><ul>
-            {loop new_info_4 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
-        </ul>
-        </div>
-
-        <div id="ilist99" style="border-right:#e8e8e8 1px solid">
-            <h6><span><a href="category.php?id=5">更多最新</a></span><a href="category.php?id=5">教育培训</a></h6><ul>
-            {loop new_info_5 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
-        </ul>
-        </div>
-
-        <div id="ilist99" style="border-right:#e8e8e8 0px solid; width:339px;">
-            <h6><span><a href="category.php?id=6">更多最新</a></span><a href="category.php?id=6">车辆信息</a></h6><ul>
-            {loop new_info_6 val}
-            <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{val['postdate']}</span><font color="#ff6600">{val['areaname']}</font>&nbsp;<a href="{val['url']}" target="_blank" title="{val['title']}" class="red">{val['title']}</a></li>
-            {/loop}
-        </ul>
-        </div>
-        <div id="clear"></div>
-        <!-- 主体 --><div class="ggbox2">  echo ads_list('4');?></div></div>
-    <div id="clear"></div>
-</div>
-</div>
-
-
-<!--便民电话模块-->
-<!--<div class="mod_3 mar10">-->
-    <!--<div class="hd clearfix">-->
-        <!--<div class="dh_bm"><b class="left">便民电话114 · 同城服务</b><span class="yellow" style="color:#f50;">想让您的电话显示在这里吗？请联系客服&nbsp;&lt;!&ndash;{loop CFG['qq'] qq}&ndash;&gt;<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={qq}&amp;Site={CFG[webname]}&amp;Menu=yes" target="_blank"><img style="display:inline" src="http://wpa.qq.com/pa?p=1:{qq}:4" height="16" border="0" alt="QQ" />{qq}</a>-->
-            <!--&lt;!&ndash;{/loop}&ndash;&gt;&nbsp; 特惠100元/年 &nbsp; &nbsp;<a href="bianmin.php">更多电话&gt;&gt;</a></span></div>-->
-    <!--</div>-->
-    <!--<div class="bd">-->
-        <!--<div id="bmdh" class="area">-->
-            <!--<ul class="bianmin clearfix">-->
-                <!--{php t1=1}-->
-                <!--{loop fac fac}-->
-                <!--<li class="bg{t1}"><i>{fac['title']}<br>{fac['phone']}</i></li>-->
-                <!--{php t1++}-->
-                <!--{/loop}-->
-            <!--</ul>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-
-<div class="friendLink mar10">
-    <div class="bd">
-
-        <div class="text">
-            友情连接：
-            {loop links[txt] link}
-            <a href="{link['url']}" target=_blank title="{link['webname']}">{link['webname']}</a>&nbsp;&nbsp;
-            {/loop}
-        </div>
+      </div>
+    </div>
+    <div class="ggbox2"><a href="javascript:;" target="_blank"><img src="../../static/picture/140916043137jjoing.jpg"
+          border="0" width="985" height="70alt=首页通栏3"></a>
 
     </div>
-</div>
+    <div class="info_box">
+      <div id="info_list" style="border-right:#e8e8e8 1px solid;">
+        <h6><span><a href="category-4.html">更多最新</a></span><a href="category-4.html">生活服务</a></h6>
+        <ul>
 
-<!-- 主体 结束 -->
-<!--{template footer}-->
-</div>
+          {volist name="new_info_4" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
+
+
+        </ul>
+      </div>
+      <div id="info_list" style="border-right:#e8e8e8 1px solid;">
+        <h6><span><a href="category-5.html">更多最新</a></span><a href="category-5.html">教育培训</a></h6>
+        <ul>
+          {volist name="new_info_5" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
+
+
+        </ul>
+      </div>
+      <div id="info_list">
+        <h6><span><a href="category-6.html">更多最新</a></span><a href="category-6.html">车辆信息</a></h6>
+        <ul>
+          {volist name="new_info_6" id="vo" offset='0' length='10'}
+          <li><span style="float:right; font-size:11px;font-family:Arial; padding-left:10px;">{$vo.createtime}</span>
+            <font color="#ff6600">{$vo.city}</font>&nbsp;&nbsp;<a href="@xxxxx.html" target="_blank" title="{$vo.first_title}" class="red">{$vo.title}</a>
+          </li>
+          {/volist}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ggbox2"> <a href="javascript:;" target="_blank"><img src=""
+        border="0" width="985" height="70alt=首页通栏4"></a>
+  </div>
+
+
+  <table width="1200" border="0" cellspacing="0" cellpadding="0" align="center" class="mar10">
+    <tr>
+      <td>
+        <div class="mod_3">
+          <div class="hd clearfix">
+            <div class="dh_bm"><b class="left">便民电话114 · 同城服务</b><span class="yellow tel_qq"
+                style="color:#f50;">想让您的电话显示在这里吗？请联系客服&nbsp;<a href="javascript:;" target="_blank"><img
+                    style="display:inline" src="../../static/picture/pa-2286349413451.jpg" border="0"
+                    alt="在线咨询">123456789</a>
+
+                &nbsp; 特惠100元/年 &nbsp; &nbsp;<a href="bianmin.html">更多电话&gt;&gt;</a></span></div>
+          </div>
+          <div class="bd">
+            <div id="bmdh" class="area">
+              <ul class="list_114 clearfix">
+
+                {volist name="fac" id="vo" offset='0' length='14'}
+                <li class="bg{$i}"><i>{$vo.name}<br>
+                  {$vo.phone}</i></li>
+                {/volist}
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="friendLink">
+          <div class="bd">
+            <div class="text"> 友情连接：
+              <a href="javascript:;" target="_blank" title="分类信息网">分类信息网</a>&nbsp;&nbsp;
+
+              <a href="javascript:;" target="_blank" title="百度娘们">百度娘们</a>&nbsp;&nbsp;
+
+              <a href="javascript:;" target="_blank" title="4554545454">4554545454</a>&nbsp;&nbsp;
+
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- 主体 结束 -->
+
+  <!-- 页脚 -->
+  <div id="clear" style="display:none;">
+    <script src="../../static/js/stat-5679645_5679645_pic.js" language="JavaScript"></script>
+  </div>
+  <div class="dibtbg"></div>
+  <div id="footer" class="clearfix">
+
+    <!-- 页脚 结束 -->
+  </div>
 </body>
+
 </html>

@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\admin\model\RegionUse;
 use app\common\controller\Frontend;
 use think\Db;
 
@@ -18,32 +19,140 @@ class Index extends Frontend
 
 //        $articles   = get_index_article('8');//文章
 //        $comments   = get_new_comment('6');//最新评论信息
-//
-//
-//        $new_info   = get_info('','','30','','date','30');//最新信息
-//        $pro_info   = get_info('','','5','pro','','30');//推荐信息
-//        $top_info   = get_info('','','8','top','','30');//置顶信息
-//        $hot_info   = get_info('','','10','','click', '10', '','m-d');//热门信息
+        $flash = $this->get_flash(6);//焦点图
+        $new_info   = $this->get_index_article('10');//最新信息--新闻
+        $top_info   = $this->get_info('','','9','top','','15');//置顶信息
+        $fac   = $this->get_fac('16');//便民信息
+
+        $info_num    = Db::name('information')->count();   //信息内容数量
+        $member_num  = Db::name('user')->count();      //用户
+        $article_num = Db::name('artile')->count();     //新闻
+
+
+        $this->assign([
+            'new_info'=>$new_info,
+            'top_info'=>$top_info,
+            'fac'=>$fac,
+            'flash'=>$flash,
+
+            'info_num'=>$info_num,
+            'member_num'=>$member_num,
+            'article_num'=>$article_num,
+        ]);
 //
 //        $thumb_info = get_info('','','8','','date','9','1');//图片信息
-        //最新婚恋
-        $catIds = $this->getSubCategoryIds(16);
-        $new_info_1   = $this->get_info($catIds,'','10','','date','30');//最新信息
+        //最新婚恋  id 2
+        //最新 求职招聘 id 7
+        $catIds = $this->getSubCategoryIds(7);
+        $new_info_1   = $this->get_info($catIds,'','10','','date','15');//最新信息
+        //最新 房屋信息 id 1
+        $catIds = $this->getSubCategoryIds(1);
+        $new_info_2   = $this->get_info($catIds,'','10','','date','15');//最新信息
+        //最新 二手买卖 id 3
+        $catIds = $this->getSubCategoryIds(3);
+        $new_info_3   = $this->get_info($catIds,'','10','','date','15');//最新信息
+        //最新 生活服务 id 6
+        $catIds = $this->getSubCategoryIds(6);
+        $new_info_4   = $this->get_info($catIds,'','10','','date','15');//最新信息
+        //最新 教育培训 id 5
+        $catIds = $this->getSubCategoryIds(5);
+        $new_info_5   = $this->get_info($catIds,'','10','','date','15');//最新信息
+        //最新 车辆信息 id 4
+        $catIds = $this->getSubCategoryIds(4);
+        $new_info_6   = $this->get_info($catIds,'','10','','date','30');//最新信息
 
-        $new_info_2   = $this->get_info('','','10','','date','30');//最新信息
-        $new_info_3   = $this->get_info('','','10','','date','30');//最新信息
-        $new_info_4   = $this->get_info('','','10','','date','30');//最新信息
-        $new_info_5   = $this->get_info('','','10','','date','30');//最新信息
-        $new_info_6   = $this->get_info('','','10','','date','30');//最新信息
         $this->assign([
             'new_info_1'=>$new_info_1,
+            'new_info_2'=>$new_info_2,
+            'new_info_3'=>$new_info_3,
+            'new_info_4'=>$new_info_4,
+            'new_info_5'=>$new_info_5,
+            'new_info_6'=>$new_info_6,
         ]);
         return $this->view->fetch();
     }
 
+
+    function get_flash($num = 6)
+    {
+        $where['starttime'] = ['<=', time()];
+        $where['endtime'] = ['>=', time()];
+        $res = Db::name('flash')
+            ->where($where)
+            ->order('id desc')
+            ->limit($num)
+            ->field('id,image,url')
+            ->select();
+        return $res;
+       /* $data = $this->read_cache('flash');
+        if ($data === false) {
+            $sql = "select * from {$table}flash order by flaorder,id";
+            $res = $db->query($sql);
+            $result = array();
+            while($row = $db->fetchRow($res)) {
+                $image .= $row['image'] . '|';
+                $url   .= $row['url'] . '|';
+            }
+            if(!empty($image) && !empty($url)) {
+                $flash['image'] = substr($image,0,-1);
+                $flash['url']   = substr($url,0,-1);
+            }
+            write_cache('flash', $flash);
+        } else {
+            $flash = $data;
+        }
+        return $flash;*/
+    }
+
+
+    function get_fac($num='20')
+    {
+        $res = Db::name('service114')
+            ->field('id, name, phone')
+            ->select();
+        return $res;
+    }
+
+    function read_cache($filename)
+    {
+        $result = array();
+        if (!empty($result[$filename])) {
+            return $result[$filename];
+        }
+        $filepath = PHPMPS_ROOT . 'data/phpcache/' . $filename . '.php';
+        if (file_exists($filepath)) {
+            include_once($filepath);
+            $result[$filename] = $data;
+            return $result[$filename];
+        } else {
+            return false;
+        }
+    }
+
+
+    function get_index_article($num='5')
+    {
+
+        $res = Db::name('artile')
+            ->limit($num)
+            ->order('id desc')
+            ->select();
+
+        $info = [];
+        foreach ($res  as $k=>$v){
+            $info[$k]['id'] = $v['id'];
+            $info[$k]['first_title'] = $v['title'];
+            $info[$k]['title'] = $this->cut_str($v['title'],19);
+            $info[$k]['createtime'] = date('m-d', $v['createtime']);
+            $info[$k]['createtime2'] = date('Y-m-d', $v['createtime']);
+
+        }
+        return $info;
+    }
+
     public function getSubCategoryIds($id = ''){
         $where = [];
-        if(!empty($id)){
+        if(empty($id)){
             $where['pid'] = ['=', '0'];
         }else{
             $where['pid'] = ['=', $id];
@@ -95,12 +204,12 @@ class Index extends Frontend
         if(!empty($protype)) {
             switch($protype) {
                 case 'pro':
-                    $where['is_pro'] = ['>=',time()];
+                    $where['is_pro_time'] = ['>=',time()];
 //                    $where .= " and is_pro >=".time();
                     break;
 
                 case 'top':
-                    $where['is_top'] = ['>=',time()];
+                    $where['is_top_time'] = ['>=',time()];
 //                    $where .= " and is_top >=".time();
                     break;
             }
@@ -117,17 +226,42 @@ class Index extends Frontend
                     break;
             }
         }
-        if(empty($order)) $order = "order by createtime desc";
+        if(empty($order)) $order = "createtime desc";
         $res = Db::name('information')
-            ->field('id,title')
+            ->field('id, title, city_id, subcategory_id, createtime')
             ->where($where)
             ->whereOr($whereOr)
             ->order($order)
-            ->limit($len)
+            ->limit($num)
             ->select();
-        return $res;
+        $info = [];
+        foreach ($res  as $k=>$v){
+            $info[$k]['id'] = $v['id'];
+            $info[$k]['first_title'] = $v['title'];
+            $info[$k]['title'] = $this->cut_str($v['title'],$len);
+            $info[$k]['city'] = $this->getCityName($v['city_id']);
+            $info[$k]['category'] = $this->getCategoryName($v['subcategory_id']);
+            $info[$k]['createtime'] = date('m-d', $v['createtime']);
+
+        }
+        return $info;
     }
 
+    function getCityName($id){
+        $re = Db::name('region_use')->where('id',$id)->column('name');
+        if(empty($re)){
+            return null;
+        }
+        return $re[0];
+    }
+
+    function getCategoryName($id){
+        $re =  Db::name('category')->where('id',$id)->column('name');
+        if(empty($re)){
+            return null;
+        }
+        return $re[0];
+    }
 
     function url_rewrite($app, $params, $page = 0, $size = 0)
     {
